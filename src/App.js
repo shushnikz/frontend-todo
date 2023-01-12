@@ -84,7 +84,7 @@ function App() {
             </div>
             <div className='row right-align'>
               <button className='waves-effect waves-light btn'>
-                Submit
+                Add
               </button>
             </div>
           </form>
