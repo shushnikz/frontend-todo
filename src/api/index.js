@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://localhost:5000/todos"
+const url = "https://backend-todo-g7wj.onrender.com/todos"
 
 export const readTodos = () => axios.get(url);
 
