@@ -52,10 +52,10 @@ function App() {
   }
 
   const removeTodo = async (id) => {
-    await deleteTodo(id)
-    const todosCopy = [...todos];
+    await deleteTodo(id);
+    const todosCopy = [...todos]
     todosCopy.filter(todo => todo._id !== id)
-    setTodos(todosCopy);
+    setTodos(todosCopy)
   }
 
   return (
