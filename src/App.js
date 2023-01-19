@@ -15,11 +15,13 @@ function App() {
     setTodo(currentTodo)
   }, [currentId])
 
+  const fetchData = async () => {
+    const result = await readTodos();
+    setTodos(result)
+  }
+
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await readTodos();
-      setTodos(result)
-    }
+
     fetchData()
   }, [currentId])
 
@@ -56,6 +58,7 @@ function App() {
     const todosCopy = [...todos]
     todosCopy.filter(todo => todo._id !== id)
     setTodos(todosCopy)
+    fetchData()
   }
 
   return (
